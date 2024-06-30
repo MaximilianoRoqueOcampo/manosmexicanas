@@ -23,6 +23,24 @@
         body{
             background-color: #F2F2F2;
         }
+        table{
+            width: 100%;
+            margin: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        .search-bar-container {
+            position: relative;
+            max-width: 400px; /* Máximo ancho de la barra de búsqueda */
+            width: 100%;
+
+        }
+
+        td, th{
+            font-family: Sansita;
+            font-size: 20px;
+
+        }
     </style>
 </head>
 <body>
@@ -54,6 +72,35 @@
     </div>
 
 </header>
+<div class="container">
+
+    <div class="row align-items-center" style="margin-top: 30px; margin: 30px">
+        <div class="col-md-8">
+            <h1 style="font-family: Sansita; font-size: 36px"><b>Usuarios Registrados</b></h1>
+        </div>
+        <div class="col-md-4">
+            <div class="form-inline justify-content-end">
+                <div class="search-bar-container">
+                    <input class="form-control mb-lg-0" type="search" placeholder="Buscar cliente..." aria-label="Buscar">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table-striped table-hover">
+        <thead>
+        <tr style="background-color: #FE7DCC">
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Correo Electronico</th>
+            <th>Dirección</th>
+            <th>Status</th>
+            <th>Acción</th>
+        </tr>
+        </thead>
+    </table>
+</div>
 
 </body>
 </html>

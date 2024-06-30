@@ -23,6 +23,12 @@
         body{
             background-color: #F2F2F2;
         }
+        .search-bar-container {
+            position: relative;
+            max-width: 400px; /* Máximo ancho de la barra de búsqueda */
+            width: 100%;
+
+        }
     </style>
 </head>
 <body>
@@ -54,6 +60,19 @@
     </div>
 
 </header>
-
+<div class="container">
+    <div class="row align-items-center" style="margin-top: 30px; margin: 30px">
+        <div class="col-md-8">
+            <h1 style="font-family: Sansita; font-size: 36px"><b>Productos</b></h1>
+        </div>
+        <div class="col-md-4">
+            <div class="form-inline justify-content-end">
+                <div class="search-bar-container">
+                    <input class="form-control mb-lg-0" type="search" placeholder="Buscar pedido..." aria-label="Buscar">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
