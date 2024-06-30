@@ -120,9 +120,11 @@
             <!--SE CREAN COLUMNAS CON TAMAÑOS PARA LOS ENLACES-->
             <div class="col-lg-4">
                 <nav id="nave">
-                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="">Publicar</a>
-                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="">Clientes</a>
-                    <a href="html/carrito.html">
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="publicarProductos.jsp">Publicar</a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="gestionUsuarios.jsp">Clientes</a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="gestionPedidos.jsp">Pedidos</a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="gestionProductos.jsp">Productos</a>
+                    <a href="carrito.html">
                         <img src="img/carrito.png" alt="" width="35px" height="35px"></a>
                 </nav>
             </div>

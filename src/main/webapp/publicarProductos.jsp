@@ -1,13 +1,12 @@
 <%--
   Created by IntelliJ IDEA.
   User: dan-a
-  Date: 23/06/2024
-  Time: 10:33 p. m.
+  Date: 30/06/2024
+  Time: 02:36 p. m.
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-
 <head>
     <title>Title</title>
     <link rel='stylesheet' type='text/css' media='screen' href='${pageContext.request.contextPath}/css/bootstrap.css'>
@@ -27,7 +26,9 @@
     </style>
 </head>
 <body>
+
 <header>
+
     <div class="container-fluid">
         <div class="row align-items-center">
             <!--SE CREAN COLUMNAS CON TAMAÑOS PARA EL LOGO-->
@@ -43,13 +44,17 @@
             <!--SE CREAN COLUMNAS CON TAMAÑOS PARA LOS ENLACES-->
             <div class="col-lg-4">
                 <nav id="nave">
-                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="index.jsp">Catálogo</a>
-                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="ingresar.jsp">Ingresar</a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="indexAdmin.jsp">Catálogo</a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="publicarProductos.jsp">Publicar</a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="gestionUsuarios.jsp">Clientes</a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="gestionProductos.jsp">Productos</a>
 
                 </nav>
             </div>
         </div>
     </div>
+
 </header>
+
 </body>
 </html>

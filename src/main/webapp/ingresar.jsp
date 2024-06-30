@@ -11,34 +11,41 @@
 <html>
 <head>
     <title>Ingresar</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='${pageContext.request.contextPath}/css/bootstrap.css'>
     <style>
         #nave, #log{
             text-align: center;
         }
         header {
             width: 100%;
-            background-color: #f8f9fa;
+            background-color: #061029;
             border-bottom: 1px solid #dee2e6;
             padding: 10px 0;
         }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        .formu{
+
+        .formu {
             border-radius: 10px;
             border: 1px solid black;
             padding: 30px;
+            height: auto;
+
         }
         .container{
-            margin-top: 3%;
+            margin-top: 1%;
+            background-color: #F2F2F2;
         }
-
+        /* Estilos personalizados */
+        .sidebar {
+            padding: 20px;
+        }
+    body{
+        background-color: #F2F2F2;
+    }
+    #titulo{
+        text-align: center;
+        font-family: Sansita;
+        font-size: 50px;
+    }
     </style>
 
 
@@ -62,9 +69,8 @@
             <div class="col-lg-4">
                 <nav id="nave">
                     <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="index.jsp">Catálogo</a>
-                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href=""></a>
-                    <a href="carrito.jsp">
-                        <img src="img/carrito.png" alt="" width="35px" height="35px"></a>
+                    <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="registrarse.jsp">Registrarse</a>
+
                 </nav>
             </div>
         </div>
@@ -73,34 +79,37 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-5 sidebar bg-light">
+        <div class="col-md-5 col-sm-8 col-12 sidebar bg-light">
             <div class="formu">
-                <h2>Inicia sesión</h2>
-                <p>Ingresa tu correo electronico y contraseña para acceder a tu cuenta.</p>
-                <form method="post" action="login">
-                    <div class="form-group mb-3">
-                        <label for="correo">Correo electronico</label>
-                        <input type="text" class="form-control mb-3" id="correo" name="correo" required placeholder="Ingresa tu correo">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="contra">Contraseña</label>
-                        <input type="password" class="form-control mb-3" id="contra" name="contra" required placeholder="Ingresa tu contraseña">
-                    </div>
-                    <%
-                        HttpSession sesion = request.getSession();
-                        String mensaje = (String) sesion.getAttribute("mensaje");
+                <form method="post" action="login" >
+                <h2 id="titulo"><b>Inicia sesión</b></h2>
+                <br>
+                <p style="font-family: Roboto; font-size: 18px">Ingresa tu correo electrónico y contraseña para acceder a tu cuenta.</p>
+                <br>
 
-                        if(mensaje!=null){ %>
-                    <p style="color: red;"><%=mensaje%></p>
+                    <div class="form-group mb-3">
+                        <label for="correo" style="font-family: Roboto; font-size: 18px">Correo electrónico</label>
+                        <input type="email"  style="font-family: Monserrat; font-size: 17px" class="form-control mb-3" id="correo" name="correo" required placeholder="Ingresa tu correo">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="contra" style="font-family: Roboto; font-size: 18px">Contraseña</label>
+                        <input type="password" style="font-family: Monserrat; font-size: 17px" class="form-control mb-3" id="contra" name="contra" required placeholder="Ingresa tu contraseña">
+                    </div>
+                    <br>
+                    <%-- Mensaje de error desde la sesión --%>
+                    <% HttpSession sesion = request.getSession();
+                        String mensaje = (String) sesion.getAttribute("mensaje");
+                        if (mensaje != null) { %>
+                    <p style="color: red;"><%= mensaje %></p>
                     <% } %>
-                    <center>
+                    <div class="text-center">
                         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                        <br> <br>
+                        <br><br>
+                        <p><a href="#">Olvide mi contraseña</a></p>
                         <p>¿No tienes una cuenta? <a href="registrarse.jsp">Crear cuenta</a></p>
-                    </center>
+                    </div>
                 </form>
             </div>
-
         </div>
     </div>
 </div>
