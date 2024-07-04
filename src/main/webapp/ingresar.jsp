@@ -59,7 +59,7 @@
             <div class="col-lg-2" id="log"><a href="index.jsp">
                 <img src="img/logo.png" alt="" width="100px" height="60px"></a>
             </div>
-            <!--SE CREAN COLUMNAS CON TAMAÑOS PARA LA BARRA DE BUSQUEDA-->
+            <!--SE CREAN COLUMNAS CON TAMAÑOS PARA LsuA BARRA DE BUSQUEDA-->
             <div class="col-lg-6">
                 <form class="mb-2 mb-lg-0">
 
